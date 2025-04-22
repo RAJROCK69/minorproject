@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authenticate Voice</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Authenticate Voice</h1>
+
+        {% if message %}
+            <p class="message">{{ message }}</p>
+        {% endif %}
+
+        <!-- ✅ FIX: Must use POST method -->
+        <form method="POST" action="/authenticate">
+            <button type="submit">Verify Voice</button>
+        </form>
+    </div>
+</body>
+</html>

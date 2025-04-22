@@ -1,0 +1,60 @@
+<!-- templates/loginoption.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Options</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .box {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        .box h2 {
+            margin-bottom: 25px;
+        }
+        .box button {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .box button:hover {
+            opacity: 0.95;
+        }
+        .password { background-color: #007bff; color: white; }
+        .face { background-color: #28a745; color: white; }
+        .voice { background-color: #ffc107; color: black; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Choose Login Method</h2>
+        <form action="/login" method="get">
+            <button class="password">Login with Password</button>
+        </form>
+        <form action="/face" method="get">
+            <button class="face">Login with Face</button>
+        </form>        
+        <form action="/authenticate" method="get">
+            <button class="voice" >Login with Voice</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animated Entry</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .container::before,
+    .container::after {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      top: 0;
+      z-index: 2;
+      background-color: #111;
+      animation: hideCurtains 2s ease forwards;
+    }
+
+    .container::before {
+      left: 0;
+      animation-delay: 0.5s;
+      transform-origin: left center;
+    }
+
+    .container::after {
+      right: 0;
+      animation-delay: 0.5s;
+      transform-origin: right center;
+    }
+
+    @keyframes hideCurtains {
+      0% {
+        transform: scaleX(1);
+        opacity: 1;
+      }
+      100% {
+        transform: scaleX(0);
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    .zoom-img {
+      width: 100vw;
+      max-height: 100vh;
+      height: auto;
+      animation: zoomExpandFromCenter 2.5s ease-out forwards;
+      transform-origin: center center;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    @keyframes zoomExpandFromCenter {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .button-container {
+      position: absolute;
+      bottom: 50px;
+      text-align: center;
+      z-index: 3;
+    }
+
+    .go-button {
+      background-color: #00c853;
+      color: #fff;
+      padding: 15px 40px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0, 200, 83, 0.3);
+      transition: background-color 0.3s ease;
+      position: absolute;
+      left: 50%;
+      bottom: 50px;
+      transform: translateX(-50%);
+      opacity: 0;
+      animation: buttonFadeIn 2s ease forwards;
+      animation-delay: 2.5s;
+      width: 200px;
+      text-decoration: none;
+    }
+
+    @keyframes buttonFadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .go-button:hover {
+      background-color: #009624;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="{{ url_for('static', filename='image.png') }}" alt="Animated Image" class="zoom-img">
+    <div class="button-container">
+      <a href="/loginoption" class="go-button">Let's Go</a>
+    </div>
+  </div>
+
+</body>
+</html>

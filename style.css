@@ -1,0 +1,115 @@
+
+.card {
+  height: 100px;
+  line-height: 100px;
+  width: 100%;
+  background-size: 500px;
+  background-position: fixed;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 2px solid transparent;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+input[type="radio"]:checked + .card {
+  border-color: #4CAF50; /* Change color to indicate selection */
+  box-shadow: 0px 0px 15px rgba(76, 175, 80, 0.6);
+  transform: scale(1.05);
+}
+
+.card {
+  height: 100px;
+  line-height: 100px;
+  width: 100%;
+  background-image: url("img/cipher.png");
+  background-size: 500px;
+  background-position: fixed;
+}
+.hindi {
+  background-color: pink;
+  color: white;
+  background-image: url("img/hindi.png");
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.english {
+  background-color: rgb(181, 181, 0);
+  color: white;
+  background-image: url("img/english.png");
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.bengali {
+  background-color: rgba(4, 200, 148, 0.915);
+  color: white;
+  background-image: url("img/bengali.png");
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+.marathi {
+  background-color: rgb(223, 239, 152);
+  color: white;
+  background-image: url("img/marathi.png");
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+.punjabi {
+  background-color: rgb(211, 239, 100);
+  color: white;
+  background-image: url("img/punjabi.png");
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+.tamil {
+  background-color: rgb(100, 239, 190);
+  color: white;
+  background-image: url("img/tamil.png");
+  background-size: 85px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+.gujrati {
+  background-color: rgb(100, 239, 237);
+  color: white;
+  background-image: url("img/gujrati.png");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+.malayalam {
+  background-color: rgba(239, 179, 100, 0.86);
+  color: white;
+  background-image: url("img/malayalam.png");
+  background-size: 110px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+.telugu {
+  background-color: rgb(239, 100, 202);
+  color: white;
+  background-image: url("img/telugu.png");
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+a {
+  text-decoration: none;
+  color: white !important;
+}
+body {
+  background: #e6f489;
+}
+.topspacing {
+  margin-top: 130px;
+}
